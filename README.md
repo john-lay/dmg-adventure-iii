@@ -32,3 +32,25 @@ start with 8 (3 + earth, illusion, air, destiny, torian)
 ## Enemies
 Crockarock (lizard enemies near fire shrine) 
 Lanmola (centipede) -> pincer enemy, mini moldorm
+
+# Technical notes
+
+## Variable list
+
+A listing of variables and their types in re-usable components (Actors/Scenes)
+
+### Global
+* `$00$: Variable 000` _Health - `number`. (Private variable. Represents the old/cached health. 2 health units equal 1 heart)
+* `$01$: Variable 001` Health - `number`. (Public variable. Can be updated in GB Studio. If the value above is different it triggers a HUD redraw)
+* `$02$: Variable 002` _Max Hearts - `number`. (Private variable. Represents the old/cached maximum hearts. 2 health units equal 1 heart)
+* `$03$: Variable 003` Max Hearts - `number`. (Public variable. Can be updated in GB Studio. If the value above is different it triggers a HUD redraw)
+* `$04$: Variable 004` _Rupees - `number`. (Private variable. Indicates the old/cached number of rupees Zelda has collected)
+* `$05$: Variable 005` Rupees - `number`. (Public variable. Can be updated in GB Studio. If the value above is different it triggers a HUD redraw)
+* `$06$: Variable 006` Zelda PosX - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
+* `$07$: Variable 007` Zelda PosY - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
+* `$08$: Variable 008` Exit Screen: Top, Right, Bottom, Left - `number`. (Indicates the direction Zelda was facing when exiting the screen. Used with the above)
+    * (0 represents null/no position)
+    * (1 represents Zelda exitted at the __top__ of the screen)
+    * (2 represents Zelda exitted at the __right__ side of the screen)
+    * (3 represents Zelda exitted at the __bottom__ of the screen)
+    * (4 represents Zelda exitted at the __left__ side of the screen)
