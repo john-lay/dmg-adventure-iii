@@ -4,26 +4,26 @@ A continuation of DMG Adventure [part I](https://github.com/john-lay/dmg-adventu
 Created with a [fork](https://github.com/john-lay/gb-studio) of [GB Studio](https://www.gbstudio.dev/)
 
 ### Weapons / Spells
-[x] calm (mystery island)
-[x] gold necklace (strength)
-[x] hammer
-[x] Joust
-[x] roar stick (strength)
+- [x] calm (mystery island)
+- [x] gold necklace (strength)
+- [x] hammer
+- [x] Joust
+- [x] roar stick (strength)
 
 ### Items / Treasures
-[x] bell bouquet (strength)
-[x] candle
-[ ] coal
-[x] compass
-[x] golden boots
-[x] map (Destiny shrine, water, strength, fire)
-[ ] plank (water shrine)
-[x] raft
-[x] red ribbon (strength)
-[ ] repellant (Zora)
-[ ] saltcellar (strength)
-[ ] tickets x2 (strength)
-[x] vial of wind (piece of power)
+- [x] bell bouquet (strength)
+- [x] candle
+- [ ] coal
+- [x] compass
+- [x] golden boots
+- [x] map (Destiny shrine, water, strength, fire)
+- [ ] plank (water shrine)
+- [x] raft
+- [x] red ribbon (strength)
+- [ ] repellant (Zora)
+- [ ] saltcellar (strength)
+- [ ] tickets x2 (strength)
+- [x] vial of wind (piece of power)
 
 
 3x overworld hearts
