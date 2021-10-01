@@ -3,31 +3,35 @@ A continuation of DMG Adventure [part I](https://github.com/john-lay/dmg-adventu
 
 Created with a [fork](https://github.com/john-lay/gb-studio) of [GB Studio](https://www.gbstudio.dev/)
 
+### Weapons / Spells
+[x] calm (mystery island)
+[x] gold necklace (strength)
+[x] hammer
+[x] Joust
+[x] roar stick (strength)
 
-- Joust
-+ Zora repellant
-    + Destiny shrine map
-+ golden boots
-+ candle
-    + map (water, strength, fire)
-+ plank (water shrine)
-+ tickets x2 (strength)
-- hammer
-- roar stick (strength)
-+ red ribbon (strength)
-+ bell (strength)
-+ bouquet (strength)
-+ coal
-- gold necklace (strength)
+### Items / Treasures
+[x] bell bouquet (strength)
+[x] candle
+[ ] coal
+[x] compass
+[x] golden boots
+[x] map (Destiny shrine, water, strength, fire)
+[ ] plank (water shrine)
+[x] raft
+[x] red ribbon (strength)
+[ ] repellant (Zora)
+[ ] saltcellar (strength)
+[ ] tickets x2 (strength)
+[x] vial of wind (piece of power)
 
-need
-+ raft
-+ vial of wind
-- calm (mystery island)
 
 3x overworld hearts
 start with 8 (3 + earth, illusion, air, destiny, torian)
 
+### sprite duplication
+gold necklace = jade amulet (mermaid necklace)
+red boots = golden boots (pegasus boots)
 
 ## Enemies
 Crockarock (lizard enemies near fire shrine) 
