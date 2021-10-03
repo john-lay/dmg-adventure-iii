@@ -13,16 +13,16 @@ Created with a [fork](https://github.com/john-lay/gb-studio) of [GB Studio](http
 ### Items / Treasures
 - [x] bell bouquet (strength)
 - [x] candle
-- [ ] coal
+- [x] coal
 - [x] compass
 - [x] golden boots
 - [x] map (Destiny shrine, water, strength, fire)
-- [ ] plank (water shrine)
+- [x] plank (water shrine)
 - [x] raft
 - [x] red ribbon (strength)
-- [ ] repellant (Zora)
-- [ ] saltcellar (strength)
-- [ ] tickets x2 (strength)
+- [x] repellant (Zora)
+- [x] saltcellar (strength)
+- [x] tickets x2 (strength)
 - [x] vial of wind (piece of power)
 
 
