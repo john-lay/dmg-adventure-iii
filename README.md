@@ -11,7 +11,7 @@ Created with a [fork](https://github.com/john-lay/gb-studio) of [GB Studio](http
 - [x] roar stick (strength)
 
 ### Items / Treasures
-- [x] bell bouquet (strength)
+- [x] Bouquet (strength)
 - [x] candle
 - [x] coal
 - [x] compass
@@ -87,3 +87,14 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 6 is ???)
   * (Flag 7 is ???)
   * (Flag 8 is ???)
+* `$14$: Variable 014` Inventory Screen - `byte`.
+  * (Flag 1 represents we've come from Quest Status screen 1)
+  * (Flag 2 represents we've come from Quest Status screen 2)
+  * (Flag 3 represents we've come from Quest Status screen 3)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+* `$15$: Variable 015` Cursor PosX - `number`. (Stores the cursor's position. Used to maintain its relative position between screen)
+* `$16$: Variable 016` Cursot PosY - `number`. (Stores the cursor's position. Used to maintain its relative position between screen)
