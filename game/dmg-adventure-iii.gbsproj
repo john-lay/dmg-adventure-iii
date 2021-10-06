@@ -2501,7 +2501,7 @@
         },
         {
             "name": "Quest Status - Overworld 1",
-            "backgroundId": "baeb67c0-8337-4e89-8db3-84f131b4f4c8",
+            "backgroundId": "ebb13723-a337-4d23-923e-dcbacc41f6f5",
             "width": 20,
             "height": 18,
             "type": "4",
@@ -2651,11 +2651,11 @@
                                             "actorId": "$self$",
                                             "x": {
                                                 "type": "number",
-                                                "value": 3
+                                                "value": 4
                                             },
                                             "y": {
                                                 "type": "number",
-                                                "value": 13
+                                                "value": 16
                                             }
                                         }
                                     },
@@ -2699,7 +2699,7 @@
                                 "__collapseElse": false,
                                 "__disableElse": true,
                                 "__label": "Calm spell equipped",
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -2710,11 +2710,11 @@
                                             "actorId": "$self$",
                                             "x": {
                                                 "type": "number",
-                                                "value": 5
+                                                "value": 6
                                             },
                                             "y": {
                                                 "type": "number",
-                                                "value": 15
+                                                "value": 16
                                             },
                                             "__collapse": false
                                         }
@@ -2766,64 +2766,6 @@
                     "y": 1
                 },
                 {
-                    "name": "Calm",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "8d8eb1d0-925d-4513-bfa1-95d86518cbd8",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [
-                        {
-                            "id": "5c2ac42d-6e40-4fd2-a700-f415432371f5",
-                            "command": "EVENT_IF_FLAGS_COMPARE",
-                            "args": {
-                                "variable": "13",
-                                "flag": "0",
-                                "__collapseElse": false,
-                                "__label": "has the axe"
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "id": "96e17627-965a-4cc5-9ebb-5521ec4b5cbf",
-                                        "command": "EVENT_END"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "id": "8dbd5e08-c61c-4c71-9ecb-a47901f609c3",
-                                        "command": "EVENT_ACTOR_HIDE",
-                                        "args": {
-                                            "actorId": "$self$"
-                                        }
-                                    },
-                                    {
-                                        "id": "18234b74-d95c-4067-8cea-13b8ebb06622",
-                                        "command": "EVENT_END"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "id": "0d2df3b8-e661-4cb7-81ac-de64badc621f",
-                            "command": "EVENT_END"
-                        }
-                    ],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "81705cb5-dc73-4932-afe9-ad13de79a02f",
-                    "x": 5,
-                    "y": 15
-                },
-                {
                     "name": "Gold Necklace",
                     "frame": 0,
                     "animate": false,
@@ -2842,8 +2784,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "8e877715-ae4d-47d2-b40f-a595b658b660",
-                    "x": 7,
-                    "y": 13
+                    "x": 8,
+                    "y": 16
                 },
                 {
                     "name": "Hammer",
@@ -2864,8 +2806,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "fe05fa16-042f-41a8-a855-599fce388f1b",
-                    "x": 9,
-                    "y": 15
+                    "x": 10,
+                    "y": 16
                 },
                 {
                     "name": "Joust",
@@ -2886,8 +2828,8 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "3424c67d-267c-4911-bd2d-659dbc4acdbc",
-                    "x": 11,
-                    "y": 13
+                    "x": 12,
+                    "y": 16
                 },
                 {
                     "name": "Roar Stick",
@@ -2908,101 +2850,74 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "314af88a-5c4c-44a1-9ec3-81f6b0ad0096",
+                    "x": 14,
+                    "y": 16
+                },
+                {
+                    "name": "Map",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "9c6aac50-e485-4d42-b45c-2c8ac057228f",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 3,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "80fb2249-64ef-4d83-98ff-f0b4e550df35",
+                    "x": 11,
+                    "y": 12
+                },
+                {
+                    "name": "Potion",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bd7c42ad-4993-49df-bc50-13d5964977fe",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 3,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "a12a7d90-1ddf-480f-a9d0-0baa37d0e5ff",
+                    "x": 9,
+                    "y": 12
+                },
+                {
+                    "name": "Compass",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "18ccc937-14bf-4545-9a38-d21eaf871145",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 3,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "0a1baa1f-de46-44a7-bf2f-e4f56064302d",
                     "x": 13,
-                    "y": 15
-                },
-                {
-                    "name": "Wand",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "ed7e5af6-b589-4b01-8315-ea38926108b3",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "967507a6-f5eb-4750-bb36-cf52952ac944",
-                    "x": 3,
-                    "y": 13
-                },
-                {
-                    "name": "Celestial Sign - Water",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "d85fa0be-33be-4e17-8d4e-3c6817fede2f",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [
-                        {
-                            "id": "4efd64b4-d463-4d1f-b68c-35789488b447",
-                            "command": "EVENT_END"
-                        }
-                    ],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "eb370b1a-ef1c-48d4-ae02-377c1cea71bc",
-                    "x": 7,
-                    "y": 9
-                },
-                {
-                    "name": "Celestial Sign - Strength",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "95dfb312-0e77-46ac-bee1-54b7640ff99c",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "bfe2ecc8-10fe-4036-b612-e4ecd87d4c30",
-                    "x": 6,
-                    "y": 6
-                },
-                {
-                    "name": "Celestial Sign - Fire",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "c0496d88-ab2a-4397-82c3-9f958d966a41",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "6b0efe0c-4721-42cb-8988-5686c9576a0d",
-                    "x": 7,
-                    "y": 4
+                    "y": 12
                 }
             ],
             "triggers": [
@@ -3132,8 +3047,8 @@
                         }
                     ],
                     "id": "26ebdb8c-2e28-4b17-8a0d-61f4c420204f",
-                    "x": 5,
-                    "y": 14,
+                    "x": 6,
+                    "y": 15,
                     "width": 2,
                     "height": 2
                 },
@@ -3218,8 +3133,8 @@
                         }
                     ],
                     "id": "25cdaf37-e712-40c1-a697-232155bbb342",
-                    "x": 3,
-                    "y": 12,
+                    "x": 4,
+                    "y": 15,
                     "width": 2,
                     "height": 2
                 },
@@ -3268,8 +3183,8 @@
                         }
                     ],
                     "id": "54059b7e-391b-4f4f-ae28-2a2b1238362b",
-                    "x": 17,
-                    "y": 15,
+                    "x": 18,
+                    "y": 16,
                     "width": 1,
                     "height": 1
                 }
@@ -5380,7 +5295,7 @@
         },
         {
             "name": "Quest Status - Overworld 2",
-            "backgroundId": "2b766d6b-de4f-4539-9638-2117eb3232aa",
+            "backgroundId": "f0216615-5e98-4223-932d-7483560a6b7e",
             "width": 20,
             "height": 18,
             "type": "4",
@@ -5530,28 +5445,6 @@
             "y": 420.79999999999984,
             "actors": [
                 {
-                    "name": "Vial of Wind",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "9d42f68c-0733-4163-8821-f380627f58d3",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "5675bd54-977b-4e71-b989-38ebe8bf3d78",
-                    "x": 7,
-                    "y": 10
-                },
-                {
                     "name": "Plank",
                     "frame": 0,
                     "animate": false,
@@ -5571,73 +5464,7 @@
                     "hit3Script": [],
                     "id": "6b9a00c7-8491-40ab-8fc3-ee36cdc5ff1a",
                     "x": 7,
-                    "y": 14
-                },
-                {
-                    "name": "Raft",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "b8099710-4a88-46bc-b069-1f6e63f4648c",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "62cef622-74c1-4ff7-bac7-54e0e63c0245",
-                    "x": 5,
                     "y": 12
-                },
-                {
-                    "name": "Potion",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "bd7c42ad-4993-49df-bc50-13d5964977fe",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "adc946f0-c86e-4b03-9ee5-284db0351c04",
-                    "x": 9,
-                    "y": 12
-                },
-                {
-                    "name": "Map",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "9c6aac50-e485-4d42-b45c-2c8ac057228f",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "df56b6b0-3eae-4e84-93fc-3e03fd50c950",
-                    "x": 11,
-                    "y": 10
                 },
                 {
                     "name": "Candle",
@@ -5657,15 +5484,15 @@
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "0b3237c3-9755-4ca1-b3c1-699bb0793f3d",
-                    "x": 13,
+                    "id": "63cd0bab-b496-4426-9117-29126a4c708f",
+                    "x": 5,
                     "y": 12
                 },
                 {
-                    "name": "Compass",
+                    "name": "Coal",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "18ccc937-14bf-4545-9a38-d21eaf871145",
+                    "spriteSheetId": "656c8861-8df7-4f32-85dc-9d427fd7a597",
                     "spriteType": "static",
                     "direction": "down",
                     "moveSpeed": 1,
@@ -5679,9 +5506,53 @@
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "7801d6b4-8a9d-4bf2-afaa-111a0c50bae5",
+                    "id": "d50c897e-e10c-4a66-ab14-aef338af4963",
+                    "x": 9,
+                    "y": 12
+                },
+                {
+                    "name": "Zora Repellant",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "0dfa6bcc-6c64-4560-9f27-23996f6eafd0",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 3,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "f25cdfcd-484f-4f8e-b881-8e07b5ca4ef0",
                     "x": 11,
-                    "y": 14
+                    "y": 12
+                },
+                {
+                    "name": "Golden Boots",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "213a8ebc-0f30-4cc5-9c59-2fec04dc6f28",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 3,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "3ae86939-d97c-4c9d-a4c6-c17597732cda",
+                    "x": 13,
+                    "y": 12
                 }
             ],
             "triggers": [
@@ -5730,8 +5601,8 @@
                         }
                     ],
                     "id": "824a7b16-b46c-43ae-bbd2-62ab100cf913",
-                    "x": 17,
-                    "y": 15,
+                    "x": 18,
+                    "y": 16,
                     "width": 1,
                     "height": 1
                 },
@@ -5780,8 +5651,8 @@
                         }
                     ],
                     "id": "0fa0336c-4230-47be-bd84-f683715c0c8a",
-                    "x": 2,
-                    "y": 15,
+                    "x": 1,
+                    "y": 16,
                     "width": 1,
                     "height": 1
                 }
@@ -5789,7 +5660,7 @@
         },
         {
             "name": "Quest Status - Overworld 3",
-            "backgroundId": "0a0c351d-b756-4a9b-bb9b-a08a769a713b",
+            "backgroundId": "55b08bb7-9413-4045-ba83-ffe8783b1278",
             "width": 20,
             "height": 18,
             "type": "4",
@@ -5940,6 +5811,50 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "9f91ddcf-b6f4-4441-bf95-22d5f13618f7",
+                    "x": 11,
+                    "y": 12
+                },
+                {
+                    "name": "Bouquet",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "f76987a2-624e-4aa8-9099-e594dabdf80f",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 3,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "9f97d8c1-6a2f-4994-b12c-5c30f6b8b3a9",
+                    "x": 5,
+                    "y": 12
+                },
+                {
+                    "name": "Salt Cellar",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "f9733d42-335a-47ab-8a74-99aed176606d",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 3,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "6030627d-16cc-4d7a-be05-78d3fd1f2785",
                     "x": 9,
                     "y": 12
                 },
@@ -5961,119 +5876,9 @@
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "9c4a0c28-c028-4f0d-86b5-204dfd570a46",
+                    "id": "3a4afe2d-2ff3-4290-808d-a50db76b887f",
                     "x": 7,
-                    "y": 10
-                },
-                {
-                    "name": "Coal",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "656c8861-8df7-4f32-85dc-9d427fd7a597",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "e06251f4-d19e-41f7-b675-e92c7ff0003f",
-                    "x": 11,
-                    "y": 10
-                },
-                {
-                    "name": "Bouquet",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "f76987a2-624e-4aa8-9099-e594dabdf80f",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "9f97d8c1-6a2f-4994-b12c-5c30f6b8b3a9",
-                    "x": 15,
-                    "y": 14
-                },
-                {
-                    "name": "Salt Cellar",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "f9733d42-335a-47ab-8a74-99aed176606d",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "6030627d-16cc-4d7a-be05-78d3fd1f2785",
-                    "x": 11,
-                    "y": 14
-                },
-                {
-                    "name": "Zora Repellant",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "0dfa6bcc-6c64-4560-9f27-23996f6eafd0",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "5ff972ab-2dbd-44f5-bd92-e118130d8210",
-                    "x": 15,
-                    "y": 10
-                },
-                {
-                    "name": "Golden Boots",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "213a8ebc-0f30-4cc5-9c59-2fec04dc6f28",
-                    "spriteType": "static",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 3,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "9c5e0e5b-2932-44bb-808a-64217547dce8",
-                    "x": 7,
-                    "y": 14
+                    "y": 12
                 }
             ],
             "triggers": [
@@ -6122,8 +5927,8 @@
                         }
                     ],
                     "id": "eb21edd4-e73a-49e2-9137-7af8a3081de1",
-                    "x": 2,
-                    "y": 15,
+                    "x": 1,
+                    "y": 16,
                     "width": 1,
                     "height": 1
                 }
@@ -6140,7 +5945,7 @@
             "imageHeight": 144,
             "filename": "debug-scene.png",
             "inode": "1970324838307625",
-            "_v": 1633447636458
+            "_v": 1633537701041
         },
         {
             "id": "4ed43fac-086b-48a9-b6af-94cb83f95bea",
@@ -6151,51 +5956,40 @@
             "imageHeight": 144,
             "filename": "game-over.png",
             "inode": "1125899908175710",
-            "_v": 1633447636474
+            "_v": 1633537701043
         },
         {
-            "id": "baeb67c0-8337-4e89-8db3-84f131b4f4c8",
-            "name": "inventory-1",
+            "id": "ebb13723-a337-4d23-923e-dcbacc41f6f5",
+            "name": "inventory-1a",
             "width": 20,
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "inventory-1.png",
-            "inode": "4222124651992730",
-            "_v": 1633449574780
+            "filename": "inventory-1a.png",
+            "inode": "4222124651992796",
+            "_v": 1633548471631
         },
         {
-            "id": "2b766d6b-de4f-4539-9638-2117eb3232aa",
-            "name": "inventory-2",
+            "id": "f0216615-5e98-4223-932d-7483560a6b7e",
+            "name": "inventory-2a",
             "width": 20,
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "inventory-2.png",
-            "inode": "2251799815018227",
-            "_v": 1633450286868
+            "filename": "inventory-2a.png",
+            "inode": "3659174698661150",
+            "_v": 1633548471617
         },
         {
-            "id": "0a0c351d-b756-4a9b-bb9b-a08a769a713b",
-            "name": "inventory-3",
+            "id": "55b08bb7-9413-4045-ba83-ffe8783b1278",
+            "name": "inventory-3a",
             "width": 20,
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "inventory-3.png",
-            "inode": "2251799815018229",
-            "_v": 1633450395708
-        },
-        {
-            "id": "49eb74d4-818d-45c1-8419-8a49d6d76205",
-            "name": "inventory",
-            "width": 20,
-            "height": 18,
-            "imageWidth": 160,
-            "imageHeight": 144,
-            "filename": "inventory.png",
-            "inode": "1125899908175711",
-            "_v": 1633447636466
+            "filename": "inventory-3a.png",
+            "inode": "4222124652082455",
+            "_v": 1633548471617
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -6206,7 +6000,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "1125899908175624",
-            "_v": 1633447636466
+            "_v": 1633537701043
         },
         {
             "id": "0dbd399f-df13-4136-accf-17b90d329e2f",
@@ -6217,7 +6011,7 @@
             "imageHeight": 144,
             "filename": "torian-forest-north.png",
             "inode": "6192449489050131",
-            "_v": 1633447636458
+            "_v": 1633537701043
         },
         {
             "id": "6ecf08c4-5b2a-46da-8048-4d2fa938a3fd",
@@ -6228,7 +6022,7 @@
             "imageHeight": 144,
             "filename": "torian-forest.png",
             "inode": "5066549582207505",
-            "_v": 1633447636458
+            "_v": 1633537701043
         }
     ],
     "spriteSheets": [
@@ -6239,7 +6033,7 @@
             "type": "static",
             "filename": "blank.png",
             "inode": "3940649674721637",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "1b1c48d7-23c7-4472-9f2b-1f2e3537f982",
@@ -6248,7 +6042,7 @@
             "type": "static",
             "filename": "candle.png",
             "inode": "2251799815018161",
-            "_v": 1633448182803
+            "_v": 1633537701043
         },
         {
             "id": "d85fa0be-33be-4e17-8d4e-3c6817fede2f",
@@ -6257,7 +6051,7 @@
             "type": "static",
             "filename": "celestial-sign-piece-5.png",
             "inode": "4785074605503692",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "95dfb312-0e77-46ac-bee1-54b7640ff99c",
@@ -6266,7 +6060,7 @@
             "type": "static",
             "filename": "celestial-sign-piece-6.png",
             "inode": "3940649675371727",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "c0496d88-ab2a-4397-82c3-9f958d966a41",
@@ -6275,7 +6069,7 @@
             "type": "static",
             "filename": "celestial-sign-piece-7.png",
             "inode": "3940649675371728",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "6d55d05f-8558-49f0-94c0-e8e50a171c5a",
@@ -6284,7 +6078,7 @@
             "type": "animated",
             "filename": "collectable.png",
             "inode": "1407374884886368",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "18ccc937-14bf-4545-9a38-d21eaf871145",
@@ -6293,7 +6087,7 @@
             "type": "static",
             "filename": "compass.png",
             "inode": "1970324838307506",
-            "_v": 1633448195938
+            "_v": 1633537701043
         },
         {
             "id": "ac4211f5-3940-40c6-8db3-8d409893cbc5",
@@ -6302,7 +6096,7 @@
             "type": "animated",
             "filename": "cursor-active.png",
             "inode": "2251799815018073",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "1c8a9db2-711a-4306-9274-9c2a1d5ee412",
@@ -6311,7 +6105,7 @@
             "type": "animated",
             "filename": "cursor.png",
             "inode": "2251799815018070",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "ed7e5af6-b589-4b01-8315-ea38926108b3",
@@ -6320,7 +6114,7 @@
             "type": "static",
             "filename": "firerod.png",
             "inode": "3377699721860698",
-            "_v": 1633449024371
+            "_v": 1633537701043
         },
         {
             "id": "0ef109db-be51-4d14-a1b5-bcfab6518ec0",
@@ -6329,7 +6123,7 @@
             "type": "static",
             "filename": "gold-necklace.png",
             "inode": "3377699721860747",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "213a8ebc-0f30-4cc5-9c59-2fec04dc6f28",
@@ -6338,7 +6132,7 @@
             "type": "static",
             "filename": "golden-boots.png",
             "inode": "3377699721860753",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "f76987a2-624e-4aa8-9099-e594dabdf80f",
@@ -6347,7 +6141,7 @@
             "type": "static",
             "filename": "hibiscus.png",
             "inode": "3940649675282070",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "d93fc11d-d274-40ce-941a-51bd6ecfdb4a",
@@ -6356,7 +6150,7 @@
             "type": "static",
             "filename": "joust-diagonal.png",
             "inode": "6755399442388567",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "c7a5487d-a038-4a94-9d95-b9cbcd00aa3f",
@@ -6365,7 +6159,7 @@
             "type": "static",
             "filename": "joust-vertical.png",
             "inode": "2251799815018160",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "6955fbc6-d0dc-4b67-99ac-258379e126c3",
@@ -6374,7 +6168,7 @@
             "type": "static",
             "filename": "left-arrow.png",
             "inode": "1125899908175717",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "ed48b222-6a5d-4a85-8663-9690c52f534b",
@@ -6383,7 +6177,7 @@
             "type": "static",
             "filename": "lttp-magic-hammer.png",
             "inode": "3096224745150095",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "9c6aac50-e485-4d42-b45c-2c8ac057228f",
@@ -6392,7 +6186,7 @@
             "type": "static",
             "filename": "map.png",
             "inode": "2533274791728831",
-            "_v": 1633448201841
+            "_v": 1633537701043
         },
         {
             "id": "656c8861-8df7-4f32-85dc-9d427fd7a597",
@@ -6401,7 +6195,7 @@
             "type": "static",
             "filename": "oos-fools-ore.png",
             "inode": "1688849861596896",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "9d42f68c-0733-4163-8821-f380627f58d3",
@@ -6410,7 +6204,7 @@
             "type": "animated",
             "filename": "piece-of-power.png",
             "inode": "2251799815018125",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "001f3d71-5ce6-4b61-9433-0dcff741694d",
@@ -6419,7 +6213,7 @@
             "type": "static",
             "filename": "plank.png",
             "inode": "2814749768439499",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "bd7c42ad-4993-49df-bc50-13d5964977fe",
@@ -6428,7 +6222,7 @@
             "type": "static",
             "filename": "potion.png",
             "inode": "2533274791728858",
-            "_v": 1633448329296
+            "_v": 1633537701043
         },
         {
             "id": "8d8eb1d0-925d-4513-bfa1-95d86518cbd8",
@@ -6437,7 +6231,7 @@
             "type": "static",
             "filename": "quest-book-calm.png",
             "inode": "5066549582124469",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "b8099710-4a88-46bc-b069-1f6e63f4648c",
@@ -6446,7 +6240,7 @@
             "type": "static",
             "filename": "raft.png",
             "inode": "2251799815018182",
-            "_v": 1633448227536
+            "_v": 1633537701043
         },
         {
             "id": "b9b79c26-42a5-4687-8ac6-41866a5b6bf8",
@@ -6455,7 +6249,7 @@
             "type": "static",
             "filename": "ribbon.png",
             "inode": "3096224745150100",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "c1eefd55-0033-49cc-bc44-5c2e182dc7e9",
@@ -6464,7 +6258,7 @@
             "type": "static",
             "filename": "right-arrow.png",
             "inode": "1125899908175718",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "f9733d42-335a-47ab-8a74-99aed176606d",
@@ -6473,7 +6267,7 @@
             "type": "static",
             "filename": "salt-cellar.png",
             "inode": "4222124651992773",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "dc36de59-4144-4d2a-9bd6-8db3c4f110da",
@@ -6482,7 +6276,7 @@
             "type": "animated",
             "filename": "spiny-beetle.png",
             "inode": "1688849861597027",
-            "_v": 1633447636458
+            "_v": 1633537701048
         },
         {
             "id": "ee2ffcd6-f332-4b95-8268-8800679b624a",
@@ -6491,7 +6285,7 @@
             "type": "static",
             "filename": "stick.png",
             "inode": "3096224745150078",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "a1a13880-3386-4568-99e2-835dd425802e",
@@ -6500,7 +6294,7 @@
             "type": "static",
             "filename": "ticket-a.png",
             "inode": "2814749768439501",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "1e1beb78-05f3-4011-9fcd-d14339f9ff5e",
@@ -6509,7 +6303,7 @@
             "type": "static",
             "filename": "ticket-b.png",
             "inode": "3940649675282120",
-            "_v": 1633447636454
+            "_v": 1633537701043
         },
         {
             "id": "1052ce8c-afd7-4a79-9cb2-d4fde98c839c",
@@ -6518,7 +6312,7 @@
             "type": "actor",
             "filename": "wand.png",
             "inode": "1407374884886369",
-            "_v": 1633447636458
+            "_v": 1633537701048
         },
         {
             "id": "3d36f6d0-af06-425e-9383-abd48af44258",
@@ -6527,7 +6321,7 @@
             "type": "actor_animated",
             "filename": "zelda.png",
             "inode": "1125899908175656",
-            "_v": 1633447636458
+            "_v": 1633537701048
         },
         {
             "id": "0dfa6bcc-6c64-4560-9f27-23996f6eafd0",
@@ -6536,7 +6330,7 @@
             "type": "static",
             "filename": "zora-repellant.png",
             "inode": "2251799815018185",
-            "_v": 1633447636454
+            "_v": 1633537701043
         }
     ],
     "palettes": [
@@ -8151,7 +7945,7 @@
             "filename": "template.mod",
             "settings": {},
             "inode": "1125899908175626",
-            "_v": 1633447636350
+            "_v": 1633537700820
         }
     ],
     "variables": [
@@ -8212,10 +8006,6 @@
             "name": "Collectable"
         },
         {
-            "id": "bfc8b047-1b8a-45ae-86b4-32a322623de3__L0",
-            "name": "Taken Damage"
-        },
-        {
             "id": "14",
             "name": "Inventory Screen"
         },
@@ -8226,6 +8016,10 @@
         {
             "id": "16",
             "name": "Cursor PosY"
+        },
+        {
+            "id": "bfc8b047-1b8a-45ae-86b4-32a322623de3__L0",
+            "name": "Taken Damage"
         }
     ],
     "engineFieldValues": [
@@ -8245,7 +8039,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 218,
-        "worldScrollY": 546,
+        "worldScrollY": 646,
         "zoom": 250,
         "customColorsEnabled": false,
         "customHead": "",
