@@ -4005,7 +4005,235 @@
                     "command": "EVENT_END"
                 }
             ],
-            "playerHit1Script": [],
+            "playerHit1Script": [
+                {
+                    "id": "9026cc2e-508b-40b1-990c-a3b094673346",
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "b75827d4-83b3-4d9a-8c27-ecbac0c69724",
+                        "__name": "Zelda Take Damage",
+                        "$variable[0]$": "L0",
+                        "$variable[1]$": "1",
+                        "$variable[2]$": "3",
+                        "$variable[3]$": "17",
+                        "$variable[4]$": "L1"
+                    },
+                    "children": {
+                        "script": [
+                            {
+                                "id": "aa56c5c8-03ab-4c44-adb7-133257e86b5a",
+                                "command": "EVENT_IF_FALSE",
+                                "args": {
+                                    "variable": "0",
+                                    "__collapseElse": false,
+                                    "__label": "Take damage",
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "f485ca23-242f-4fd3-a3f1-1b1bd3f19001",
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "0",
+                                                "__collapse": false
+                                            }
+                                        },
+                                        {
+                                            "id": "d8f36c09-c307-4206-8281-566bf031579b",
+                                            "command": "EVENT_ACTOR_EMOTE",
+                                            "args": {
+                                                "actorId": "player",
+                                                "emoteId": "4",
+                                                "__collapse": false,
+                                                "__comment": false
+                                            }
+                                        },
+                                        {
+                                            "id": "d8adef14-bc1f-4ae9-99d5-96eb4964f06d",
+                                            "command": "EVENT_DEC_VALUE",
+                                            "args": {
+                                                "variable": "1",
+                                                "__collapse": false,
+                                                "__comment": false
+                                            }
+                                        },
+                                        {
+                                            "id": "98a78039-d876-4db4-a78a-e75360799619",
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "1",
+                                                "operator": "==",
+                                                "comparator": 0,
+                                                "__collapseElse": false,
+                                                "__disableElse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "e635fa8a-b504-433d-88f8-d85a10b99083",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
+                                                        "args": {
+                                                            "variable": "3",
+                                                            "flag": 2,
+                                                            "__collapseElse": false,
+                                                            "__label": "Has a potion"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "id": "c9b90fb9-4f06-4724-8ec8-0bbb0ac509f9",
+                                                                    "command": "EVENT_COMMENT",
+                                                                    "args": {
+                                                                        "text": "Zelda has twice as many HP as she does hearts. (shown as half hearts)",
+                                                                        "__collapse": true
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "627ff310-2bc2-42e4-b032-01425f5d1444",
+                                                                    "command": "EVENT_SET_VALUE",
+                                                                    "args": {
+                                                                        "variable": "4",
+                                                                        "value": {
+                                                                            "type": "variable",
+                                                                            "value": "2"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "ac79d7e8-55c0-4add-8c67-20182e53ab8f",
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "4",
+                                                                        "operation": "mul",
+                                                                        "other": "val",
+                                                                        "vectorY": "3",
+                                                                        "value": 2,
+                                                                        "minValue": "0",
+                                                                        "maxValue": "255",
+                                                                        "clamp": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "bb92b736-522e-4180-9eea-5b4c67f86225",
+                                                                    "command": "EVENT_SET_VALUE",
+                                                                    "args": {
+                                                                        "variable": "1",
+                                                                        "value": {
+                                                                            "type": "variable",
+                                                                            "value": "4"
+                                                                        },
+                                                                        "__collapse": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "9b639a40-153e-4633-8176-ae7357e738b6",
+                                                                    "command": "EVENT_CLEAR_FLAGS",
+                                                                    "args": {
+                                                                        "variable": "3",
+                                                                        "flag1": false,
+                                                                        "flag2": false,
+                                                                        "flag3": true,
+                                                                        "flag4": false,
+                                                                        "flag5": false,
+                                                                        "flag6": false,
+                                                                        "flag7": false,
+                                                                        "flag8": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "b667b20d-dfc7-4dcd-a3f8-78d2683f4b4b",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "id": "7255d582-2fb2-4cf1-b077-4b63e0287316",
+                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                    "args": {
+                                                                        "sceneId": "50aa4e15-ae01-4685-a657-5f15663d3801",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "direction": "",
+                                                                        "fadeSpeed": "2"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "892e56c0-4212-4c13-978b-bb5f368d9242",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "d1c122c1-1bec-42da-b3da-0045538e053a",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "f84fc8e4-94d8-417c-bb18-b9e3428d7111",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "d9cb6df9-5f60-416c-8388-dd25278133e9",
+                                            "command": "EVENT_WAIT",
+                                            "args": {
+                                                "time": 0.5,
+                                                "__comment": false
+                                            }
+                                        },
+                                        {
+                                            "id": "a99ec4ef-89cc-437e-813b-63deed60b7e3",
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "0"
+                                            }
+                                        },
+                                        {
+                                            "id": "be0adbde-8f3f-430e-bd94-a89791b5124f",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "1d92e5f2-64ea-4215-bca4-e95d113d98e4",
+                                            "command": "EVENT_STOP",
+                                            "args": {
+                                                "__comment": false,
+                                                "__collapse": true
+                                            }
+                                        },
+                                        {
+                                            "id": "27b8f9ac-1333-407a-8499-939d22e6b5a9",
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "Companion script \"push away\" attached to enemy to prevent taking double damage",
+                                                "__collapse": true
+                                            }
+                                        },
+                                        {
+                                            "id": "d489e78f-967d-4acf-ab93-e49059943f49",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "2ea149fd-3168-429c-8476-01c4f3f39c6e",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "85f293ee-465b-431f-baf8-5324fcc093c2",
+                    "command": "EVENT_END"
+                }
+            ],
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "fa833cd4-d3c8-42eb-a4d9-dcbb5bb9cd9f",
@@ -7595,79 +7823,223 @@
             ],
             "playerHit1Script": [
                 {
-                    "id": "0854060b-411f-476b-9d32-c7df98a4a6b3",
-                    "command": "EVENT_IF_FALSE",
+                    "id": "106e4a68-8a98-426e-b40f-fe71b7605a28",
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
                     "args": {
-                        "variable": "L0",
-                        "__collapseElse": false,
-                        "__label": "Take damage"
+                        "customEventId": "b75827d4-83b3-4d9a-8c27-ecbac0c69724",
+                        "__name": "Zelda Take Damage",
+                        "$variable[0]$": "L0",
+                        "$variable[1]$": "1",
+                        "$variable[2]$": "3",
+                        "$variable[3]$": "17",
+                        "$variable[4]$": "L1"
                     },
                     "children": {
-                        "true": [
+                        "script": [
                             {
-                                "id": "8af01ff6-8a30-45a6-8fb6-bdde6bc9c90f",
-                                "command": "EVENT_SET_TRUE",
+                                "id": "b2bbde80-8472-4c1f-a184-91349c8be956",
+                                "command": "EVENT_IF_FALSE",
                                 "args": {
-                                    "variable": "L0"
+                                    "variable": "0",
+                                    "__collapseElse": false,
+                                    "__label": "Take damage",
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "888e3155-36c4-41d9-a3e0-d35e9f560393",
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "0",
+                                                "__collapse": false
+                                            }
+                                        },
+                                        {
+                                            "id": "a980985b-7555-4754-86e9-5d871fba0c65",
+                                            "command": "EVENT_ACTOR_EMOTE",
+                                            "args": {
+                                                "actorId": "player",
+                                                "emoteId": "4",
+                                                "__collapse": false,
+                                                "__comment": false
+                                            }
+                                        },
+                                        {
+                                            "id": "1c1d9c4a-61de-4c66-8a1f-0109d8b5e870",
+                                            "command": "EVENT_DEC_VALUE",
+                                            "args": {
+                                                "variable": "1",
+                                                "__collapse": false,
+                                                "__comment": false
+                                            }
+                                        },
+                                        {
+                                            "id": "a3d6dbc4-b71f-43f5-a964-f0879a3d1afa",
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "1",
+                                                "operator": "==",
+                                                "comparator": 0,
+                                                "__collapseElse": false,
+                                                "__disableElse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "a3610897-7250-4468-9813-504f9be1a02e",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
+                                                        "args": {
+                                                            "variable": "3",
+                                                            "flag": 2,
+                                                            "__collapseElse": false,
+                                                            "__label": "Has a potion"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "id": "a4656f41-db3f-4976-a9e7-28b95ca46e73",
+                                                                    "command": "EVENT_COMMENT",
+                                                                    "args": {
+                                                                        "text": "Zelda has twice as many HP as she does hearts. (shown as half hearts)",
+                                                                        "__collapse": true
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "8990b969-f35a-48ff-a523-2a35ddd75e97",
+                                                                    "command": "EVENT_SET_VALUE",
+                                                                    "args": {
+                                                                        "variable": "4",
+                                                                        "value": {
+                                                                            "type": "variable",
+                                                                            "value": "2"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "cabeab7e-8c52-470b-8d40-d4de251855f4",
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "4",
+                                                                        "operation": "mul",
+                                                                        "other": "val",
+                                                                        "vectorY": "3",
+                                                                        "value": 2,
+                                                                        "minValue": "0",
+                                                                        "maxValue": "255",
+                                                                        "clamp": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "5ba6fdee-6848-42db-a179-422686c046a5",
+                                                                    "command": "EVENT_SET_VALUE",
+                                                                    "args": {
+                                                                        "variable": "1",
+                                                                        "value": {
+                                                                            "type": "variable",
+                                                                            "value": "4"
+                                                                        },
+                                                                        "__collapse": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "b84572da-2527-4e2a-8be0-3b1b17a5d738",
+                                                                    "command": "EVENT_CLEAR_FLAGS",
+                                                                    "args": {
+                                                                        "variable": "3",
+                                                                        "flag1": false,
+                                                                        "flag2": false,
+                                                                        "flag3": true,
+                                                                        "flag4": false,
+                                                                        "flag5": false,
+                                                                        "flag6": false,
+                                                                        "flag7": false,
+                                                                        "flag8": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "8c44f59e-5d43-4460-b183-6b3dbb35df17",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "id": "7b3262c5-8d2f-404e-a120-2437c9aac999",
+                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                    "args": {
+                                                                        "sceneId": "50aa4e15-ae01-4685-a657-5f15663d3801",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "direction": "",
+                                                                        "fadeSpeed": "2"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "id": "24eb1308-d72c-453e-bd66-c5ed5a473d71",
+                                                                    "command": "EVENT_END"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "cd809a71-dfa6-43f6-9d53-0c9e81567112",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "836dff58-99f6-4814-a615-813426a48710",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "e2817969-52ef-4e43-a810-549dcce19176",
+                                            "command": "EVENT_WAIT",
+                                            "args": {
+                                                "time": 0.5,
+                                                "__comment": false
+                                            }
+                                        },
+                                        {
+                                            "id": "f590b920-117f-4f38-b8e7-ccdb3e470866",
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "0"
+                                            }
+                                        },
+                                        {
+                                            "id": "55e70450-1991-452f-a612-18f3a9525cb1",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "2d8cb758-15a7-4f3b-8cc4-531f9ada0d91",
+                                            "command": "EVENT_STOP",
+                                            "args": {
+                                                "__comment": false,
+                                                "__collapse": true
+                                            }
+                                        },
+                                        {
+                                            "id": "7e8a4a01-1b3a-4ad3-be20-c066b8186432",
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "Companion script \"push away\" attached to enemy to prevent taking double damage",
+                                                "__collapse": true
+                                            }
+                                        },
+                                        {
+                                            "id": "3c24bef0-472d-4df8-b425-321b28c8c4c6",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
                                 }
                             },
                             {
-                                "id": "455315f9-aa25-400d-8492-ef75519cd49b",
-                                "command": "EVENT_ACTOR_EMOTE",
-                                "args": {
-                                    "actorId": "player",
-                                    "emoteId": "4",
-                                    "__collapse": false,
-                                    "__comment": false
-                                }
-                            },
-                            {
-                                "id": "389aeed6-7999-4ca2-b8e1-81ba3c51d450",
-                                "command": "EVENT_DEC_VALUE",
-                                "args": {
-                                    "variable": "1",
-                                    "__collapse": false,
-                                    "__comment": false
-                                }
-                            },
-                            {
-                                "id": "90ae369f-be8b-4d28-bdb0-6864b77ba4ef",
-                                "command": "EVENT_WAIT",
-                                "args": {
-                                    "time": 0.5,
-                                    "__comment": false
-                                }
-                            },
-                            {
-                                "id": "5bbbc4f0-d846-43ea-9b97-89caea27ec3b",
-                                "command": "EVENT_SET_FALSE",
-                                "args": {
-                                    "variable": "L0"
-                                }
-                            },
-                            {
-                                "id": "737fd4a0-26ee-4b3f-b71a-15babcc8d87c",
-                                "command": "EVENT_END"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "id": "ca6c75b2-6a31-42f3-96ba-aa34df57b5d6",
-                                "command": "EVENT_STOP",
-                                "args": {
-                                    "__comment": false
-                                }
-                            },
-                            {
-                                "id": "3f46848a-21ba-4a04-b604-c766a49ef05c",
-                                "command": "EVENT_COMMENT",
-                                "args": {
-                                    "text": "Companion script \"push away\" attached to enemy to prevent taking double damage",
-                                    "__collapse": true
-                                }
-                            },
-                            {
-                                "id": "72bd0250-543a-484e-b350-26d55a40b8b4",
+                                "id": "1d7fedd5-bd6b-45ca-8242-53391493002f",
                                 "command": "EVENT_END"
                             }
                         ]
@@ -25156,7 +25528,7 @@
             "imageHeight": 144,
             "filename": "debug-scene.png",
             "inode": "1970324838307625",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "4ed43fac-086b-48a9-b6af-94cb83f95bea",
@@ -25167,7 +25539,7 @@
             "imageHeight": 144,
             "filename": "game-over.png",
             "inode": "1125899908175710",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "ebb13723-a337-4d23-923e-dcbacc41f6f5",
@@ -25178,7 +25550,7 @@
             "imageHeight": 144,
             "filename": "inventory-1a.png",
             "inode": "4503599628793037",
-            "_v": 1634129689770
+            "_v": 1634211250917
         },
         {
             "id": "d3fc9d1d-f2af-4c96-8f32-a457a66ed281",
@@ -25189,7 +25561,7 @@
             "imageHeight": 144,
             "filename": "inventory-1b.png",
             "inode": "1970324838307785",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "00d2ef81-d661-46fc-b4c2-5a9b40daaecb",
@@ -25200,7 +25572,7 @@
             "imageHeight": 144,
             "filename": "inventory-1c.png",
             "inode": "1407374884886486",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "6beea960-00d2-4527-ab3a-f7557523a6e8",
@@ -25211,7 +25583,7 @@
             "imageHeight": 144,
             "filename": "inventory-1d.png",
             "inode": "1688849861597151",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "f0216615-5e98-4223-932d-7483560a6b7e",
@@ -25222,7 +25594,7 @@
             "imageHeight": 144,
             "filename": "inventory-2a.png",
             "inode": "1970324838307550",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "ec524b66-a780-4f20-bc76-e1d013d628cd",
@@ -25233,7 +25605,7 @@
             "imageHeight": 144,
             "filename": "inventory-2b.png",
             "inode": "3096224744589232",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "1d82df72-c5a0-4872-b05a-ee281fe6b6fd",
@@ -25244,7 +25616,7 @@
             "imageHeight": 144,
             "filename": "inventory-2c.png",
             "inode": "1407374884886488",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "8a3f5922-80d6-4943-8863-48ab37c73598",
@@ -25255,7 +25627,7 @@
             "imageHeight": 144,
             "filename": "inventory-2d.png",
             "inode": "1688849861597153",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "55b08bb7-9413-4045-ba83-ffe8783b1278",
@@ -25266,7 +25638,7 @@
             "imageHeight": 144,
             "filename": "inventory-3a.png",
             "inode": "3377699721860849",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "708dfa2f-6225-41ae-bd94-7eb28ce7b86b",
@@ -25277,7 +25649,7 @@
             "imageHeight": 144,
             "filename": "inventory-3b.png",
             "inode": "1407374884886483",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "83836917-df58-4388-8f0f-72acaec18a9d",
@@ -25288,7 +25660,7 @@
             "imageHeight": 144,
             "filename": "inventory-3c.png",
             "inode": "1407374884886490",
-            "_v": 1634129689770
+            "_v": 1634211250937
         },
         {
             "id": "b33f2754-7193-4326-9162-c9ad6710cbbf",
@@ -25299,7 +25671,7 @@
             "imageHeight": 144,
             "filename": "inventory-3d.png",
             "inode": "1407374884886498",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "93ad18c9-900c-4c0c-bfd5-c8b584c63157",
@@ -25310,7 +25682,7 @@
             "imageHeight": 144,
             "filename": "inventory-4a.png",
             "inode": "1970324838307572",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "6457e20d-ccef-4111-b1ec-540e7bca27fc",
@@ -25321,7 +25693,7 @@
             "imageHeight": 144,
             "filename": "inventory-4b.png",
             "inode": "1407374884886493",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "8e76028e-47bd-4709-8139-7ab267bdb080",
@@ -25332,7 +25704,7 @@
             "imageHeight": 144,
             "filename": "inventory-4c.png",
             "inode": "1407374884886492",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "178fed30-12f8-45f5-b726-5ff5322b418b",
@@ -25343,7 +25715,7 @@
             "imageHeight": 144,
             "filename": "inventory-4d.png",
             "inode": "1970324838307812",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -25354,7 +25726,7 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "inode": "1125899908175624",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "76b6f7e6-3c09-41fc-b360-01771d622c72",
@@ -25365,7 +25737,7 @@
             "imageHeight": 144,
             "filename": "save-quit.png",
             "inode": "1688849861597110",
-            "_v": 1634129689770
+            "_v": 1634211250936
         },
         {
             "id": "0dbd399f-df13-4136-accf-17b90d329e2f",
@@ -25376,7 +25748,7 @@
             "imageHeight": 144,
             "filename": "torian-forest-north.png",
             "inode": "6192449489050131",
-            "_v": 1634129689770
+            "_v": 1634211250937
         },
         {
             "id": "6ecf08c4-5b2a-46da-8048-4d2fa938a3fd",
@@ -25387,7 +25759,7 @@
             "imageHeight": 144,
             "filename": "torian-forest.png",
             "inode": "5066549582207505",
-            "_v": 1634129689770
+            "_v": 1634211250937
         }
     ],
     "spriteSheets": [
@@ -25398,7 +25770,7 @@
             "type": "actor",
             "filename": "arrow-spell.png",
             "inode": "1407374884886547",
-            "_v": 1634130251787
+            "_v": 1634211250937
         },
         {
             "id": "b33d1d4b-2197-45b7-95c8-1406d5b4671f",
@@ -25407,7 +25779,7 @@
             "type": "static",
             "filename": "blank.png",
             "inode": "3940649674721637",
-            "_v": 1634129689770
+            "_v": 1634211250937
         },
         {
             "id": "62cbfef4-fd02-470d-89d5-6d046aee54bd",
@@ -25416,7 +25788,7 @@
             "type": "static",
             "filename": "bow.png",
             "inode": "5629499535546076",
-            "_v": 1634129689770
+            "_v": 1634211250937
         },
         {
             "id": "1b1c48d7-23c7-4472-9f2b-1f2e3537f982",
@@ -25425,7 +25797,7 @@
             "type": "static",
             "filename": "candle.png",
             "inode": "2251799815018161",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "6d55d05f-8558-49f0-94c0-e8e50a171c5a",
@@ -25434,7 +25806,7 @@
             "type": "animated",
             "filename": "collectable.png",
             "inode": "1407374884886368",
-            "_v": 1634129689770
+            "_v": 1634211250937
         },
         {
             "id": "18ccc937-14bf-4545-9a38-d21eaf871145",
@@ -25443,7 +25815,7 @@
             "type": "static",
             "filename": "compass.png",
             "inode": "1970324838307506",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "ac4211f5-3940-40c6-8db3-8d409893cbc5",
@@ -25452,7 +25824,7 @@
             "type": "animated",
             "filename": "cursor-active.png",
             "inode": "2251799815018073",
-            "_v": 1634129689770
+            "_v": 1634211250937
         },
         {
             "id": "1c8a9db2-711a-4306-9274-9c2a1d5ee412",
@@ -25461,7 +25833,7 @@
             "type": "animated",
             "filename": "cursor.png",
             "inode": "2251799815018070",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "ed7e5af6-b589-4b01-8315-ea38926108b3",
@@ -25470,7 +25842,7 @@
             "type": "static",
             "filename": "firerod.png",
             "inode": "3377699721860698",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "47b3a5ba-7719-4d81-b066-76a5affe0206",
@@ -25479,7 +25851,7 @@
             "type": "animated",
             "filename": "gale-seed-effect.png",
             "inode": "11258999069759505",
-            "_v": 1634129925035
+            "_v": 1634211250937
         },
         {
             "id": "0ef109db-be51-4d14-a1b5-bcfab6518ec0",
@@ -25488,7 +25860,7 @@
             "type": "static",
             "filename": "gold-necklace.png",
             "inode": "3377699721860747",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "213a8ebc-0f30-4cc5-9c59-2fec04dc6f28",
@@ -25497,7 +25869,7 @@
             "type": "static",
             "filename": "golden-boots.png",
             "inode": "3377699721860753",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "f76987a2-624e-4aa8-9099-e594dabdf80f",
@@ -25506,7 +25878,7 @@
             "type": "static",
             "filename": "hibiscus.png",
             "inode": "3940649675282070",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "d93fc11d-d274-40ce-941a-51bd6ecfdb4a",
@@ -25515,7 +25887,7 @@
             "type": "static",
             "filename": "joust-diagonal.png",
             "inode": "6755399442388567",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "c7a5487d-a038-4a94-9d95-b9cbcd00aa3f",
@@ -25524,7 +25896,7 @@
             "type": "static",
             "filename": "joust-vertical.png",
             "inode": "2251799815018160",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "6955fbc6-d0dc-4b67-99ac-258379e126c3",
@@ -25533,7 +25905,7 @@
             "type": "static",
             "filename": "left-arrow.png",
             "inode": "1125899908175717",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "ed48b222-6a5d-4a85-8663-9690c52f534b",
@@ -25542,7 +25914,7 @@
             "type": "static",
             "filename": "lttp-magic-hammer.png",
             "inode": "3096224745150095",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "9c6aac50-e485-4d42-b45c-2c8ac057228f",
@@ -25551,7 +25923,7 @@
             "type": "static",
             "filename": "map.png",
             "inode": "2533274791728831",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "656c8861-8df7-4f32-85dc-9d427fd7a597",
@@ -25560,7 +25932,7 @@
             "type": "static",
             "filename": "oos-fools-ore.png",
             "inode": "1688849861596896",
-            "_v": 1634129689775
+            "_v": 1634211250937
         },
         {
             "id": "9d42f68c-0733-4163-8821-f380627f58d3",
@@ -25569,7 +25941,7 @@
             "type": "animated",
             "filename": "piece-of-power.png",
             "inode": "2251799815018125",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "001f3d71-5ce6-4b61-9433-0dcff741694d",
@@ -25578,7 +25950,7 @@
             "type": "static",
             "filename": "plank.png",
             "inode": "2814749768439499",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "bd7c42ad-4993-49df-bc50-13d5964977fe",
@@ -25587,7 +25959,7 @@
             "type": "static",
             "filename": "potion.png",
             "inode": "2533274791728858",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "8d8eb1d0-925d-4513-bfa1-95d86518cbd8",
@@ -25596,7 +25968,7 @@
             "type": "static",
             "filename": "quest-book-calm.png",
             "inode": "5066549582124469",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "b8099710-4a88-46bc-b069-1f6e63f4648c",
@@ -25605,7 +25977,7 @@
             "type": "static",
             "filename": "raft.png",
             "inode": "2251799815018182",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "b9b79c26-42a5-4687-8ac6-41866a5b6bf8",
@@ -25614,7 +25986,7 @@
             "type": "static",
             "filename": "ribbon.png",
             "inode": "3096224745150100",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "c1eefd55-0033-49cc-bc44-5c2e182dc7e9",
@@ -25623,7 +25995,7 @@
             "type": "static",
             "filename": "right-arrow.png",
             "inode": "1125899908175718",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "f9733d42-335a-47ab-8a74-99aed176606d",
@@ -25632,7 +26004,7 @@
             "type": "static",
             "filename": "salt-cellar.png",
             "inode": "4222124651992773",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "dc36de59-4144-4d2a-9bd6-8db3c4f110da",
@@ -25641,7 +26013,7 @@
             "type": "animated",
             "filename": "spiny-beetle.png",
             "inode": "1688849861597027",
-            "_v": 1634129689773
+            "_v": 1634211250942
         },
         {
             "id": "ee2ffcd6-f332-4b95-8268-8800679b624a",
@@ -25650,7 +26022,7 @@
             "type": "static",
             "filename": "stick.png",
             "inode": "3096224745150078",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "a1a13880-3386-4568-99e2-835dd425802e",
@@ -25659,7 +26031,7 @@
             "type": "static",
             "filename": "ticket-a.png",
             "inode": "2814749768439501",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "1e1beb78-05f3-4011-9fcd-d14339f9ff5e",
@@ -25668,7 +26040,7 @@
             "type": "static",
             "filename": "ticket-b.png",
             "inode": "3940649675282120",
-            "_v": 1634129689771
+            "_v": 1634211250937
         },
         {
             "id": "1052ce8c-afd7-4a79-9cb2-d4fde98c839c",
@@ -25677,7 +26049,7 @@
             "type": "actor",
             "filename": "wand.png",
             "inode": "1407374884886369",
-            "_v": 1634129689773
+            "_v": 1634211250942
         },
         {
             "id": "3d36f6d0-af06-425e-9383-abd48af44258",
@@ -25686,7 +26058,7 @@
             "type": "actor_animated",
             "filename": "zelda.png",
             "inode": "1125899908175656",
-            "_v": 1634129689775
+            "_v": 1634211250939
         },
         {
             "id": "0dfa6bcc-6c64-4560-9f27-23996f6eafd0",
@@ -25695,7 +26067,7 @@
             "type": "static",
             "filename": "zora-repellant.png",
             "inode": "2251799815018185",
-            "_v": 1634129689774
+            "_v": 1634211250937
         }
     ],
     "palettes": [
@@ -28818,6 +29190,242 @@
                     "command": "EVENT_END"
                 }
             ]
+        },
+        {
+            "id": "b75827d4-83b3-4d9a-8c27-ecbac0c69724",
+            "name": "Zelda Take Damage",
+            "description": "Whan happens when Zelda is hit by an enemy",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "Has taken damage"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "Health"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Max Hearts"
+                },
+                "3": {
+                    "id": "3",
+                    "name": "Purchasable"
+                },
+                "4": {
+                    "id": "4",
+                    "name": "Full Health"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "id": "b2bbde80-8472-4c1f-a184-91349c8be956",
+                    "command": "EVENT_IF_FALSE",
+                    "args": {
+                        "variable": "0",
+                        "__collapseElse": false,
+                        "__label": "Take damage",
+                        "__collapse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "888e3155-36c4-41d9-a3e0-d35e9f560393",
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "0",
+                                    "__collapse": false
+                                }
+                            },
+                            {
+                                "id": "a980985b-7555-4754-86e9-5d871fba0c65",
+                                "command": "EVENT_ACTOR_EMOTE",
+                                "args": {
+                                    "actorId": "player",
+                                    "emoteId": "4",
+                                    "__collapse": false,
+                                    "__comment": false
+                                }
+                            },
+                            {
+                                "id": "1c1d9c4a-61de-4c66-8a1f-0109d8b5e870",
+                                "command": "EVENT_DEC_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "__collapse": false,
+                                    "__comment": false
+                                }
+                            },
+                            {
+                                "id": "a3d6dbc4-b71f-43f5-a964-f0879a3d1afa",
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "operator": "==",
+                                    "comparator": 0,
+                                    "__collapseElse": false,
+                                    "__disableElse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "a3610897-7250-4468-9813-504f9be1a02e",
+                                            "command": "EVENT_IF_FLAGS_COMPARE",
+                                            "args": {
+                                                "variable": "3",
+                                                "flag": 2,
+                                                "__collapseElse": false,
+                                                "__label": "Has a potion"
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "a4656f41-db3f-4976-a9e7-28b95ca46e73",
+                                                        "command": "EVENT_COMMENT",
+                                                        "args": {
+                                                            "text": "Zelda has twice as many HP as she does hearts. (shown as half hearts)",
+                                                            "__collapse": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "8990b969-f35a-48ff-a523-2a35ddd75e97",
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "4",
+                                                            "value": {
+                                                                "type": "variable",
+                                                                "value": "2"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "cabeab7e-8c52-470b-8d40-d4de251855f4",
+                                                        "command": "EVENT_VARIABLE_MATH",
+                                                        "args": {
+                                                            "vectorX": "4",
+                                                            "operation": "mul",
+                                                            "other": "val",
+                                                            "vectorY": "3",
+                                                            "value": 2,
+                                                            "minValue": "0",
+                                                            "maxValue": "255",
+                                                            "clamp": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "5ba6fdee-6848-42db-a179-422686c046a5",
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "1",
+                                                            "value": {
+                                                                "type": "variable",
+                                                                "value": "4"
+                                                            },
+                                                            "__collapse": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "b84572da-2527-4e2a-8be0-3b1b17a5d738",
+                                                        "command": "EVENT_CLEAR_FLAGS",
+                                                        "args": {
+                                                            "variable": "3",
+                                                            "flag1": false,
+                                                            "flag2": false,
+                                                            "flag3": true,
+                                                            "flag4": false,
+                                                            "flag5": false,
+                                                            "flag6": false,
+                                                            "flag7": false,
+                                                            "flag8": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "8c44f59e-5d43-4460-b183-6b3dbb35df17",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "7b3262c5-8d2f-404e-a120-2437c9aac999",
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "50aa4e15-ae01-4685-a657-5f15663d3801",
+                                                            "x": 0,
+                                                            "y": 0,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "24eb1308-d72c-453e-bd66-c5ed5a473d71",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "cd809a71-dfa6-43f6-9d53-0c9e81567112",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "836dff58-99f6-4814-a615-813426a48710",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "e2817969-52ef-4e43-a810-549dcce19176",
+                                "command": "EVENT_WAIT",
+                                "args": {
+                                    "time": 0.5,
+                                    "__comment": false
+                                }
+                            },
+                            {
+                                "id": "f590b920-117f-4f38-b8e7-ccdb3e470866",
+                                "command": "EVENT_SET_FALSE",
+                                "args": {
+                                    "variable": "0"
+                                }
+                            },
+                            {
+                                "id": "55e70450-1991-452f-a612-18f3a9525cb1",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "2d8cb758-15a7-4f3b-8cc4-531f9ada0d91",
+                                "command": "EVENT_STOP",
+                                "args": {
+                                    "__comment": false,
+                                    "__collapse": true
+                                }
+                            },
+                            {
+                                "id": "7e8a4a01-1b3a-4ad3-be20-c066b8186432",
+                                "command": "EVENT_COMMENT",
+                                "args": {
+                                    "text": "Companion script \"push away\" attached to enemy to prevent taking double damage",
+                                    "__collapse": true
+                                }
+                            },
+                            {
+                                "id": "3c24bef0-472d-4df8-b425-321b28c8c4c6",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "1d7fedd5-bd6b-45ca-8242-53391493002f",
+                    "command": "EVENT_END"
+                }
+            ]
         }
     ],
     "music": [
@@ -28827,7 +29435,7 @@
             "filename": "template.mod",
             "settings": {},
             "inode": "1125899908175626",
-            "_v": 1634129689505
+            "_v": 1634211250666
         }
     ],
     "variables": [
@@ -28933,7 +29541,7 @@
         },
         {
             "id": "bfc8b047-1b8a-45ae-86b4-32a322623de3__L0",
-            "name": "Taken Damage"
+            "name": "Local 0"
         },
         {
             "id": "6c35c69e-9015-4616-9168-78aeb727b79a__L0",
@@ -29069,9 +29677,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            556,
-            185,
-            185
+            574,
+            191,
+            191
         ],
         "showNavigator": true,
         "defaultFadeStyle": "white",
