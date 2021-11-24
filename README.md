@@ -76,7 +76,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 4 represents Zelda has the gold necklace spell equipped - costs 2 Rupee to cast)
   * (Flag 5 represents Zelda has the roar stick spell equipped - costs 3 Rupee to cast)
   * (Flag 6 represents Zelda has the hammer spell equipped - costs 2 Rupee to cast)
-  * (Flag 7 is ???)
+  * (Flag 7 represents Zelda has the turquoise ring spell equipped - costs 26 Rupee to cast)
   * (Flag 8 is ???)
 * `$12$: Variable 012` Spell Cost - `number`. (Cost of the equipped spell)
 * `$13$: Variable 013` Collectable - `byte`.
