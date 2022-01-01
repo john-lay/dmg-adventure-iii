@@ -114,7 +114,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 3 represents Zelda has completed the Fire Shrine)
   * (Flag 4 represents Zelda has collected the Canvula Heart)
   * (Flag 5 represents Zelda has collected the South Port Heart)
-  * (Flag 6 is ???)
+  * (Flag 6 represents Zelda has collected the Mystery Island Heart)
   * (Flag 7 is ???)
   * (Flag 8 is ???)
 * `$19$: Variable 019` Resume location - `byte`.
