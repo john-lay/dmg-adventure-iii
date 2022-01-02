@@ -5,10 +5,11 @@
  <tileset firstgid="113" source="../../../dmg-adventure/assets/tilemaps/overworld-2.tsx"/>
  <tileset firstgid="689" source="../../../dmg-adventure/assets/tilemaps/items-2.tsx"/>
  <tileset firstgid="753" source="../../../dmg-adventure/assets/tilemaps/animated-tiles.tsx"/>
+ <tileset firstgid="977" source="swamp-tree.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="18">
   <data encoding="csv">
 93,738,739,740,741,742,743,744,745,746,737,16,14,15,730,93,93,93,93,93,
-103,103,103,103,103,103,75,112,75,112,75,112,485,486,487,488,75,222,221,222,
+103,103,103,103,103,103,75,112,75,112,75,112,989,990,991,992,75,222,221,222,
 103,103,103,75,103,75,112,75,112,75,112,75,112,75,112,103,237,238,237,238,
 103,103,103,103,75,103,75,112,103,103,103,222,221,103,103,222,221,222,221,222,
 103,238,103,103,237,238,237,238,237,238,237,238,237,238,237,238,237,238,237,238,
