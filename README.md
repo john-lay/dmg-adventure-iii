@@ -143,7 +143,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 3 represents Zelda has played the archery game, target 1)
   * (Flag 4 represents Zelda has played the archery game, target 2)
   * (Flag 5 represents Zelda has played the archery game, target 3)
-  * (Flag 6 is ???)
+  * (Flag 6 represents Zelda has unlocked the door in the Roar stick room)
   * (Flag 7 is ???)
   * (Flag 8 is ???)
 * `$24$: Variable 024` Fire Shrine Flags - `byte`.
